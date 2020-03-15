@@ -28,7 +28,7 @@ class User extends Model
     protected $filterable_fields = [
         'id'    => 'is',
         'username'    => 'like',
-		'created_at'  => 'between',
+        'created_at'  => 'between',
         'created_after'	=> 'scope'
     ];
 
