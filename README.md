@@ -17,29 +17,6 @@ One can use it in this way:
 As for now, it can filer collection by three methods - exact filter (is), like filter (like) and range filter (between).
 
 
-## Examples
-
-```php
-
-class User extends Model
-{
-    use Filterable;
-
-    protected $filterable_fields = [
-        'id'    => 'is',
-        'username'    => 'like',
-        'created_at'  => 'between',
-        'created_after'	=> 'scope'
-    ];
-
-    public function scopeCreatedAfter($query, $time)
-    {
-        return $query->where('created_at', '>', $time);
-    }
-}
-```
-
-
 ## Installation
 
 You can install the package via composer:
@@ -63,6 +40,28 @@ protected $filterable_fields = [
 
 And voila!
 
+
+## Examples
+
+```php
+
+class User extends Model
+{
+    use Filterable;
+
+    protected $filterable_fields = [
+        'id'    => 'is',
+        'username'    => 'like',
+        'created_at'  => 'between',
+        'created_after' => 'scope'
+    ];
+
+    public function scopeCreatedAfter($query, $time)
+    {
+        return $query->where('created_at', '>', $time);
+    }
+}
+```
 
 
 ## License
