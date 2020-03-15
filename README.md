@@ -1,5 +1,5 @@
 # Laravel Filterable Trait
-Filterable trait for Laravel models. Slightly inspired by 
+Filterable trait for Laravel models. Slightly inspired by
 <a href="https://github.com/n7olkachev/laravel-filterable">n7olkachev/laravel-filterable</a>.
 
 
@@ -26,9 +26,9 @@ class User extends Model
     use Filterable;
 
     protected $filterable_fields = [
-        'id'			=> 'is',
-		'username'		=> 'like',
-		'created_at'	=> 'between',
+        'id'    => 'is',
+        'username'    => 'like',
+		'created_at'  => 'between',
         'created_after'	=> 'scope'
     ];
 
